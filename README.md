@@ -1,5 +1,4 @@
 # web_tech_project
-# Web Tech Project
 
 ## Overview
 
