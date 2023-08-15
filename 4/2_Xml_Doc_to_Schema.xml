@@ -1,0 +1,52 @@
+<!-- xml document -->
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="library_schema.xsd">
+
+  <book>
+    <title>Harry Potter and the Sorcerer's Stone</title>
+    <author>J.K. Rowling</author>
+    <release_date>1997-06-26</release_date>
+  </book>
+  <book>
+    <title>Atomic Habits</title>
+    <author>James Clear</author>
+    <release_date>2018-10-16</release_date>
+  </book>
+  <book>
+    <title>Bhagavad Gita</title>
+    <author>Vyasa</author>
+    <release_date>Estimated 5th to 2nd century BCE</release_date>
+  </book>
+   <book>
+    <title>Bhagavad Gita</title>
+    <author>Vyasa</author>
+    <release_date>Estimated 5th to 2nd century BCE</release_date>
+  </book>
+ 
+</library> -->
+
+
+<!-- xml schema:-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Define complex types for elements -->
+  <xs:element name="library">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="book" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="title" type="xs:string"/>
+              <xs:element name="author" type="xs:string"/>
+              <xs:element name="release_date" type="xs:date"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

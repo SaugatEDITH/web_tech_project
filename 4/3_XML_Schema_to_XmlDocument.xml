@@ -1,0 +1,62 @@
+<!-- xml schema -->
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="scifi_movies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="movie" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="title" type="xs:string"/>
+              <xs:element name="director" type="xs:string"/>
+              <xs:element name="release_year" type="xs:gYear"/>
+              <xs:element name="description" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+ -->
+
+
+ <!-- xml document -->
+
+ <?xml version="1.0" encoding="UTF-8"?>
+<scifi_movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="scifi_movie_schema.xsd">
+
+  <movie>
+    <title>Avengers: Endgame</title>
+    <director>Anthony Russo, Joe Russo</director>
+    <release_year>2019</release_year>
+    <description>The culmination of the Infinity Saga in the MCU.</description>
+  </movie>
+  <movie>
+    <title>Wonder Woman</title>
+    <director>Patty Jenkins</director>
+    <release_year>2017</release_year>
+    <description>The origin story of Diana Prince, an Amazonian warrior in the DCU.</description>
+  </movie>
+  <movie>
+    <title>Guardians of the Galaxy</title>
+    <director>James Gunn</director>
+    <release_year>2014</release_year>
+    <description>A group of intergalactic misfits team up to save the galaxy in the MCU.</description>
+  </movie>
+  <movie>
+    <title>Aquaman</title>
+    <director>James Wan</director>
+    <release_year>2018</release_year>
+    <description>The underwater adventures of Arthur Curry in the DCU.</description>
+  </movie>
+  <movie>
+    <title>Black Panther</title>
+    <director>Ryan Coogler</director>
+    <release_year>2018</release_year>
+    <description>T'Challa becomes the king of Wakanda and the hero Black Panther in the MCU.</description>
+  </movie>
+</scifi_movies>

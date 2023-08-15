@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Avengers Data</title>
+</head>
+<body>
+
+<table border="1" id="avengersTable">
+  <tr>
+    <th>Name</th>
+    <th>Alias</th>
+    <th>Power</th>
+  </tr>
+</table>
+
+<script>
+  // XML data embedded within the HTML file
+  var xmlData = `
+    <avengers>
+      <avenger>
+        <name>Iron Man</name>
+        <alias>Tony Stark</alias>
+        <power>Genius-level intellect, powered armor suit</power>
+      </avenger>
+      <avenger>
+        <name>Thor</name>
+        <alias>Thor Odinson</alias>
+        <power>Superhuman strength, lightning manipulation</power>
+      </avenger>
+      <avenger>
+        <name>Hulk</name>
+        <alias>Bruce Banner</alias>
+        <power>Superhuman strength, gamma radiation control</power>
+      </avenger>
+    </avengers>
+  `;
+
+  // Parse the XML data using DOMParser
+  var parser = new DOMParser();
+  var xmlDoc = parser.parseFromString(xmlData, "text/xml");
+  
+  // Extract avenger nodes and populate the table
+  var avengers = xmlDoc.getElementsByTagName("avenger");
+  var table = document.getElementById("avengersTable");
+
+  for (var i = 0; i < avengers.length; i++) {
+    var name = avengers[i].getElementsByTagName("name")[0].textContent;
+    var alias = avengers[i].getElementsByTagName("alias")[0].textContent;
+    var power = avengers[i].getElementsByTagName("power")[0].textContent;
+
+    var row = table.insertRow();
+    var nameCell = row.insertCell(0);
+    var aliasCell = row.insertCell(1);
+    var powerCell = row.insertCell(2);
+
+    nameCell.innerHTML = name;
+    aliasCell.innerHTML = alias;
+    powerCell.innerHTML = power;
+  }
+</script>
+
+</body>
+</html>
