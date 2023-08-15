@@ -1,0 +1,14 @@
+table,tr,td {
+    border: solid 3px black;
+    padding: 50px;
+    border-collapse: collapse;
+  }
+  tr.odd :nth-of-type(odd) {
+    background-color: #000000;
+  }
+  tr.even :nth-of-type(even) {
+    background-color: #000000;
+  }
+  tr {
+    background-color: #ffffff;
+  }
